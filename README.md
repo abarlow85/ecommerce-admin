@@ -12,5 +12,10 @@ npm install
 Backend setup can be viewed [here](https://github.com/abarlow85/ecommerce-api)
 
 ## Starting the development server
+`npm run serve`
+
+or with gulp:
 `gulp serve`
+
+
 
