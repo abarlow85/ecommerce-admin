@@ -111,7 +111,7 @@ class Breadcrumbs extends Component {
     const {plural, single} = this.props.names;
     return (
       <div>
-        <nav className="breadcrumb mb-0 rounded-0">
+        <nav className="breadcrumb mb-0 rounded-0 small">
           {this.renderBreadcrumbs(paths, plural, single, document)}
         </nav>
         <Alert {...alerts} path={this.props.pathname}/>

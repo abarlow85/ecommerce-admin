@@ -119,9 +119,19 @@ class DocumentForm extends Component {
     if (formStatus !== 'submit') {
       return (
         <div>
-          <button className="btn btn-info mr-4 mb-3" id="form-save-add" onClick={this.handleFormSubmit}>Save and add another</button>
-          <button className="btn btn-info mr-4 mb-3" id="form-save-edit" onClick={this.handleFormSubmit}>Save and continue editing</button>
-          <button type="submit" form="model-form" className="btn btn-primary mb-3" id="form-save">SAVE</button>
+          <div className="hidden-xs-down">
+            <button className="btn btn-info mr-4 mb-3" id="form-save-add" onClick={this.handleFormSubmit}>Save and add another</button>
+            <button className="btn btn-info mr-4 mb-3" id="form-save-edit" onClick={this.handleFormSubmit}>Save and continue editing</button>
+            <button type="submit" form="model-form" className="btn btn-primary mb-3" id="form-save">SAVE</button>
+          </div>
+          <div className="hidden-sm-up dropdown">
+            <button className="btn btn-secondary dropdown-toggle" type="button" id="submitDropdown" data-toggle="dropdown">Submit options</button>
+            <div className="dropdown-menu" aria-labelledby="submitDropdown">
+              <button className="dropdown-item small" type="button" id="form-save-add" onClick={this.handleFormSubmit}>Save and add another</button>
+              <button className="dropdown-item small" type="button" id="form-save-edit" onClick={this.handleFormSubmit}>Save and continue editing</button>
+              <button type="submit" form="model-form" className="dropdown-item small" id="form-save">SAVE</button>
+            </div>
+          </div>
         </div>
       );
     }

@@ -4,6 +4,7 @@ import classnames from 'classnames';
 class FormInput extends Component {
 
   shouldComponentUpdate(nextProps) {
+    // don't re-render when other form fields change.
     const oldValue = this.props.value;
     const newValue = nextProps.value;
     if (newValue === oldValue && nextProps.formErrors === this.props.formErrors) {
@@ -21,7 +22,7 @@ class FormInput extends Component {
       url:
         !value || position === 'after' ?
          null :
-          <a target="_blank" href={`${value}`} className="input-group-addon">View Saved Url</a>,
+          <a target="_blank" href={`${value}`} className="input-group-addon"><small>View Url</small></a>,
       currency:
         position === 'before' ?
           <span className="input-group-addon">$</span> : <span className="input-group-addon">.00</span>
